@@ -7,7 +7,7 @@
 
 ---
 
-> *This document is provided for informational purposes only. It does not constitute financial advice, investment advice, or an offer to sell securities or digital assets. All protocol parameters and source references correspond to Protocol Version 4.*
+> *This document is provided for informational purposes only. It does not constitute financial advice, investment advice, or an offer to sell securities or digital assets. All protocol parameters and source references correspond to Protocol Version 1.*
 
 ---
 
