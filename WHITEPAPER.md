@@ -736,4 +736,4 @@ All values are drawn from the production Rust source at Protocol Version 4. Para
 
 ---
 
-*© 2026 BLEEP Project · Quantum Trust Network · Protocol Version 4 · bleep-testnet-1*
+*© 2026 BLEEP Project · Quantum Trust Network · Protocol Version 1 · bleep-testnet-1*
