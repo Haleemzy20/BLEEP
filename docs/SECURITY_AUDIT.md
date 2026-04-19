@@ -1,10 +1,10 @@
-# BLEEP Protocol — Sprint 9 Security Audit Report
+# BLEEP Protocol — Security Audit Report
 
-**Auditor:** Trail of BLEEP Security (independent)  
+**Auditor:** (independent)  
 **Protocol Version:** 3  
 **Sprint:** 9  
 **Date:** 2026-Q2  
-**Verdict:** ✅ PASS — cleared for Sprint 10 mainnet preparation
+**Verdict:** ✅ PASS — cleared for testnet preparation
 
 ---
 
