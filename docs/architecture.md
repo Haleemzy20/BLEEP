@@ -1,6 +1,6 @@
 # BLEEP Architecture
 
-**Version:** 1.0 — Sprint 9
+**Version:** 1.0
 
 This document provides the definitive top-level architectural reference for the BLEEP V1 codebase. For a narrative introduction, see [`docs/architecture.md`](./docs/architecture.md). For component-level details, see each crate's `README.md`.
 
