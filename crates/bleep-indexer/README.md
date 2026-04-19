@@ -8,7 +8,7 @@
 
 ## License
 
-Licensed under **MIT license.
+Licensed under **MIT license**.
 Copyright © 2025 Muhammad Attahir.
 
 ---
