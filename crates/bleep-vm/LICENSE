@@ -1,34 +1,56 @@
-Business Source License 1.1
+# Business Source License 1.1
 
-Licensor: Muhammad Attahir
+**SPDX-License-Identifier: BSL-1.1**
 
-Licensed Work: The BLEEP Virtual Machine (BLEEP-VM) and all source code files within the /vm directory of the BLEEP repository.
+---
 
-The Licensed Work is provided under the terms of this Business Source License (the “License”). The Licensed Work may only be used in accordance with the terms below.
+**Licensor:** Muhammad Attahir
 
-Change Date: July 13, 2028
+**Licensed Work:** The BLEEP Virtual Machine (`bleep-vm`) and all source code files within the `crates/bleep-vm/` directory of the BLEEP repository.
 
-Change License: Apache License, Version 2.0
+**Change Date:** July 13, 2028
 
-Terms
+**Change License:** Apache License, Version 2.0
 
-1. Grant of Rights. Subject to the conditions below, you may copy, modify, and use the Licensed Work, but you may not use it in production or for commercial purposes until the Change Date.
+---
 
-2. Limitations on Production Use. Use of the Licensed Work in a production environment, or for any commercial purpose (including as part of a commercial offering), is not permitted until the Change Date.
+## Terms
 
-3. Redistribution. You may redistribute the Licensed Work only if:
-   (a) You retain this License and all license notices in all copies;
-   (b) You do not alter or remove any proprietary or author attribution notices;
-   (c) You do not use the Licensed Work in violation of Section 2.
+### 1. Grant of Rights
 
-4. Modification. You may modify the Licensed Work for internal research or evaluation, but such modified versions are subject to this License and may not be used in production until the Change Date.
+Subject to the conditions below, you may copy, modify, and use the Licensed Work for non-production, non-commercial purposes only until the Change Date.
 
-5. Change Date. On the Change Date, the License will automatically convert to the Change License. After that date, the Licensed Work will be licensed under the Change License.
+### 2. Limitations on Production Use
 
-6. Disclaimer. The Licensed Work is provided “AS IS,” without warranty of any kind. Licensor disclaims all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+Use of the Licensed Work in a **production environment**, or for any **commercial purpose** (including as part of a commercial offering, SaaS, or hosted service), is **not permitted** until the Change Date.
 
-7. Limitation of Liability. In no event will Licensor be liable for any damages, including direct, indirect, special, incidental, or consequential damages, arising out of the use or inability to use the Licensed Work.
+### 3. Redistribution
 
-For more information, visit: https://mariadb.com/bsl11/
+You may redistribute the Licensed Work only if:
 
-SPDX-License-Identifier: BSL-1.1
+- (a) You retain this License and all license notices in all copies;
+- (b) You do not alter or remove any proprietary or author attribution notices;
+- (c) You do not use the Licensed Work in violation of Section 2.
+
+### 4. Modification
+
+You may modify the Licensed Work for internal research or evaluation purposes. Such modified versions are subject to this License and may not be used in production until the Change Date.
+
+### 5. Change Date
+
+On the **Change Date (July 13, 2028)**, this License will automatically convert to the **Change License (Apache License, Version 2.0)**. After that date, the Licensed Work is governed by the Apache License 2.0.
+
+### 6. Disclaimer of Warranties
+
+The Licensed Work is provided **"AS IS,"** without warranty of any kind. The Licensor disclaims all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+### 7. Limitation of Liability
+
+In no event will Licensor be liable for any damages, including direct, indirect, special, incidental, or consequential damages, arising out of the use or inability to use the Licensed Work.
+
+---
+
+For additional information, visit: <https://mariadb.com/bsl11/>
+
+Copyright © 2025 Muhammad Attahir. All rights reserved.
+
