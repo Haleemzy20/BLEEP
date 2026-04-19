@@ -1,6 +1,6 @@
 # bleep-p2p
 
-**Production-Grade P2P Networking for BLEEP**
+**P2P Networking for BLEEP**
 
 `bleep-p2p` implements the peer-to-peer networking stack for BLEEP nodes: encrypted transport, Kademlia DHT peer discovery, Plumtree gossip propagation, AI-scored peer management, Sybil detection, and an onion router for privacy-preserving message routing.
 
