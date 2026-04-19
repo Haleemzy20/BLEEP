@@ -1,8 +1,8 @@
-# BLEEP Phase 4: Shard Self-Healing & Rollback
+# Shard Self-Healing & Rollback
 
 ## Overview
 
-BLEEP Phase 4 implements production-grade shard fault isolation, recovery, and deterministic rollback mechanisms. The system ensures that when a single shard encounters Byzantine faults, the rest of the network continues operating normally while the faulty shard is systematically recovered.
+BLEEP implements shard fault isolation, recovery, and deterministic rollback mechanisms. The system ensures that when a single shard encounters Byzantine faults, the rest of the network continues operating normally while the faulty shard is systematically recovered.
 
 **Design Principle**: Fail locally. Recover deterministically. Never halt the chain.
 
