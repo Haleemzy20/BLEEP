@@ -1,4 +1,4 @@
-//! Production-grade post-quantum proof system replacing Groth16.
+//! post-quantum proof system.
 //! 
 //! Transparent hash-based proofs with SPHINCS+ signatures for post-quantum security.
 //! No trusted setup. Zero compromise on security or auditability.
