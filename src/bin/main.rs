@@ -116,7 +116,7 @@ async fn main() {
         .init();
 
     info!("╔══════════════════════════════════════════════════════════════╗");
-    info!("║  BLEEP Blockchain Node — Protocol v3                         ║");
+    info!("║  BLEEP Blockchain Node — Protocol v1                         ║");
     info!("║  Cross-Chain Alpha · Live Economics · PAT Engine             ║");
     info!("╚══════════════════════════════════════════════════════════════╝");
 
@@ -260,7 +260,7 @@ async fn run() -> Result<(), Box<dyn Error>> {
 
     // ── Step 6c: STARK initialization ─────────────────────────────────────────
     info!("🔐 [6c/16] Initializing STARK prover/verifier (no trusted setup required)…");
-    info!("   STARKs are transparent — no MPC ceremony needed.");
+    info!("   STARKs are transparent.");
     let _block_prover = bleep_zkp::BlockProver::new();
     let _block_verifier = bleep_zkp::BlockVerifier::new();
     info!("  ✅ STARK block circuit ready.");
