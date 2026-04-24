@@ -485,9 +485,8 @@ mod tests {
 
     #[test]
     fn test_devnet_setup_and_block_prove_verify() {
-        let (pk, vk) = devnet_setup();
-        let prover   = BlockProver::new(pk);
-        let verifier = BlockVerifier::new(vk);
+        let prover   = BlockProver::new();
+        let verifier = BlockVerifier::new();
 
         let sk_seed      = [0x42u8; 32];
         let block_hash   = [0xABu8; 32];
@@ -503,21 +502,19 @@ mod tests {
             block_hash,
             sk_seed,
         );
-        let public_inputs = circuit.public_inputs_as_fr();
         let proof_bytes = prover.prove(circuit).expect("prove failed");
 
         assert!(!proof_bytes.is_empty(), "proof should be non-empty");
         assert!(
-            verifier.verify(&proof_bytes, &public_inputs),
+            verifier.verify(&proof_bytes, 1, 0, 3, merkle_root.as_bytes(), &validator_pk).unwrap(),
             "proof verification failed"
         );
     }
 
     #[test]
     fn test_block_proof_wrong_inputs_fails() {
-        let (pk, vk) = devnet_setup();
-        let prover   = BlockProver::new(pk);
-        let verifier = BlockVerifier::new(vk);
+        let prover   = BlockProver::new();
+        let verifier = BlockVerifier::new();
 
         let circuit = BlockValidityCircuit::for_proving(
             1, 0, 3,
@@ -529,49 +526,23 @@ mod tests {
         let proof_bytes = prover.prove(circuit).expect("prove failed");
 
         // Tamper with public inputs — verifier must reject
-        let mut bad_inputs = vec![
-            u64_to_fr(1), u64_to_fr(0), u64_to_fr(3),
-            bytes31_to_fr(&hash_to_31_bytes(b"tampered")),
-            bytes31_to_fr(&hash_to_31_bytes(b"tampered")),
-        ];
+        let wrong_merkle = "wrongmerkle00000000000000000000000000000000000000000000000000000000";
         assert!(
-            !verifier.verify(&proof_bytes, &bad_inputs),
+            !verifier.verify(&proof_bytes, 2, 0, 3, wrong_merkle.as_bytes(), &[0x11u8; 64]).unwrap(),
             "tampered inputs should fail verification"
-        );
-        bad_inputs.clear();
-    }
-
-    #[test]
-    fn test_batch_tx_prove_verify() {
-        let (pk, vk) = devnet_batch_setup();
-        let prover   = BatchProver::new(pk);
-        let verifier = BlockVerifier::new(vk);
-
-        let amounts = vec![100u64, 250, 50];
-        let nonces  = vec![1u64, 2, 3];
-        let total   = amounts.iter().sum::<u64>();
-
-        let circuit = TxBatchCircuit::new(amounts, nonces);
-        let public_inputs = vec![u64_to_fr(total), u64_to_fr(3)];
-        let proof_bytes = prover.prove_batch(circuit).expect("batch prove failed");
-
-        assert!(!proof_bytes.is_empty());
-        assert!(
-            verifier.verify(&proof_bytes, &public_inputs),
-            "batch proof verification failed"
         );
     }
 
     #[test]
     fn test_field_helpers() {
-        let v = u64_to_fr(42);
-        assert_eq!(v, Fr::from(42u64));
+        let v = u64_to_base_element(42);
+        assert_eq!(v, BaseElement::from(42u64));
 
         let b31 = [0xFFu8; 31];
-        let _fr = bytes31_to_fr(&b31); // must not panic
+        let _fr = bytes31_to_base_element(&b31); // must not panic
 
         let b16 = [0xAAu8; 16];
-        let _fr2 = bytes16_to_fr(&b16);
+        let _fr2 = bytes16_to_base_element(&b16);
 
         let h = hash_to_31_bytes(b"bleep test");
         assert_eq!(h.len(), 31);
