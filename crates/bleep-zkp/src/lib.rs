@@ -38,7 +38,7 @@ pub mod stark_proofs;
 pub use stark_proofs::{
     StarkProof, BlockValidityAir, BlockValidityProver, BlockValidityVerifier,
 };
-pub use stark_proofs::ProofVerifier as Verifier;
+pub use ProofVerifier as Verifier;
 
 // ── Public input count ────────────────────────────────────────────────────────
 
