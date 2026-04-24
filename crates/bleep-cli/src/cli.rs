@@ -395,7 +395,7 @@ async fn run(cmd: Commands) -> Result<()> {
             let proof_bytes = hex::decode(&proof)
                 .map_err(|e| anyhow!("Invalid hex proof: {}", e))?;
             let verifier = ZkVerifier::new();
-            let valid = verifier.verify(&proof_bytes, &[]);
+            let valid = verifier.verify(&proof_bytes);
             if valid {
                 println!("✅ ZK proof is valid ({} bytes)", proof_bytes.len());
             } else {
